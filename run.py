@@ -28,3 +28,17 @@ def display_dialogue(character, dialogue, options):
     print(f"{character}: {dialogue}")
     for i, option in enumerate(options, 1):
         print(f"({i}) {option}")
+
+def play_game():
+    current_row = 1
+    while True:
+        row_data = get_row(current_row)
+        (
+            character, dialogue, option_a, option_b, option_c,
+            next_a, next_b, next_c
+        ) = row_data
+
+        options = [option for option in [option_a, option_b, option_c] if option]
+        next_rows = [int(next_row) for next_row in [next_a, next_b, next_c] if next_row]
+
+        display_dialogue(character, dialogue, options)
