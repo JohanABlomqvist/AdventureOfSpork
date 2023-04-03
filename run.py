@@ -50,11 +50,10 @@ def play_game():
         while True:
             user_choice = input("Choose an option (1, 2, or 3): ")
             if user_choice.isdigit() and 1 <= int(user_choice) <= len(options):
-                current_row = next_rows[int(user_choice) - 1]
+                current_row = next_rows[int(user_choice) - 1]  # Use next_rows here
                 break
             else:
                 print("Invalid choice. Please try again.")
-
 
 if __name__ == '__main__':
     play_game()
