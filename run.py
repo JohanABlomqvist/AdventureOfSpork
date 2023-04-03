@@ -42,3 +42,19 @@ def play_game():
         next_rows = [int(next_row) for next_row in [next_a, next_b, next_c] if next_row]
 
         display_dialogue(character, dialogue, options)
+
+        if current_row in [10, 11, 12]:  # Check if the game is finished
+            print("You finished the game!")
+            break
+
+        while True:
+            user_choice = input("Choose an option (1, 2, or 3): ")
+            if user_choice.isdigit() and 1 <= int(user_choice) <= len(options):
+                current_row = next_rows[int(user_choice) - 1]
+                break
+            else:
+                print("Invalid choice. Please try again.")
+
+
+if __name__ == '__main__':
+    play_game()
