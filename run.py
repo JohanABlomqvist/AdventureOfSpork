@@ -2,6 +2,9 @@ import os
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_google_sheets_api():
     key_file_path = os.environ['GOOGLE_APPLICATION_CREDENTIALS']
