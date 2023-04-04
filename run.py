@@ -13,7 +13,7 @@ def get_row(row_number):
     try:
         service = get_google_sheets_api()
         sheet_id = '1y1gpQaX6n1Pix4pcw7K_MTS8X1hg_703FGEO3Y4Ll3w'
-        range_name = f'Sheet1!A{row_number}:H{row_number}'
+        range_name = f'Sheet1!A{row_number}:B{row_number}'
         result = (
             service.spreadsheets().values().get(
                 spreadsheetId=sheet_id, range=range_name).execute()
