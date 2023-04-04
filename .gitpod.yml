@@ -1,7 +1,9 @@
 image:
   file: .gitpod.dockerfile
 tasks:
- - init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
+ - init: >
+     . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh;
+     export GOOGLE_APPLICATION_CREDENTIALS="/workspace/AdventureOfSpork/credentials/adventure-382614-acf6c7dddf36.json"
    command: /home/gitpod/.pg_ctl/bin/pg_start > /dev/null
  - command: . ${GITPOD_REPO_ROOT}/.vscode/uptime.sh &
 vscode:
