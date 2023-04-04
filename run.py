@@ -54,7 +54,7 @@ def display_dialogue(character, dialogue, options, current_row):
         print(f"({i}) {option}")
 
 def play_game():
-    current_row = 2
+    current_row = 1
     while True:
         row_data = get_row(current_row)
         (
